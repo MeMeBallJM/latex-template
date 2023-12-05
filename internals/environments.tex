@@ -125,3 +125,25 @@
   colframe= definition_color_frame,
   coltitle = definition_color_title,
 }{definition}
+
+% Note environment
+\definecolor{note_color_background}{HTML}{F9D8DE}
+\definecolor{note_color_frame}{HTML}{F2ACB8}
+\definecolor{note_color_title}{HTML}{FFFFFF}
+\newtcbtheorem[number within=section]{note}{Note}
+{
+  skin=enhanced,
+  boxrule = 0.75mm,
+  sharp corners,
+  % Title settings
+  attach boxed title to top left = {
+      yshift*=-\tcboxedtitleheight/2,
+      xshift = 10mm,
+    },
+  boxed title style = {colback=note_color_frame, sharp corners},
+  % Adjust colors
+  colback= note_color_background,
+  colframe= note_color_frame,
+  coltitle = note_color_title,
+}{definition}
+
