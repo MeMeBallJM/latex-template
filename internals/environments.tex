@@ -126,7 +126,7 @@
   coltitle = definition_color_title,
 }{definition}
 
-% Note environment
+% Notation environment
 \definecolor{notation_color_background}{HTML}{F9D8DE}
 \definecolor{notation_color_frame}{HTML}{F2ACB8}
 \definecolor{notation_color_title}{HTML}{FFFFFF}
@@ -145,5 +145,26 @@
   colback= notation_color_background,
   colframe= notation_color_frame,
   coltitle = notation_color_title,
-}{definition}
+}{notation}
+
+% Example environment
+\definecolor{example_color_background}{HTML}{DDDCB6}
+\definecolor{example_color_frame}{HTML}{BAB86B}
+\definecolor{example_color_title}{HTML}{000000}
+\newtcbtheorem[number within=section]{example}{Example}
+{
+  skin=enhanced,
+  boxrule = 0.75mm,
+  sharp corners,
+  % Title settings
+  attach boxed title to top left = {
+      yshift*=-\tcboxedtitleheight/2,
+      xshift = 10mm,
+    },
+  boxed title style = {colback=example_color_frame, sharp corners},
+  % Adjust colors
+  colback= example_color_background,
+  colframe= example_color_frame,
+  coltitle = example_color_title,
+}{example}
 
